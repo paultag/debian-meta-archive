@@ -26,5 +26,4 @@ def patch(archive, source, dsc):
         }
 
 
-
-archive.map("unstable", "main", patch)
+archive.amap(10, "unstable", "main", patch)
