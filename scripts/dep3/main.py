@@ -8,7 +8,7 @@ archive = Archive("http://192.168.1.50/debian")
 def flatten(path):
     for root, dirs, files in os.walk(path):
         for dpath in dirs:
-            yield from report(os.path.join(root, dpath))
+            yield from flatten(os.path.join(root, dpath))
         yield from (os.path.join(root, x) for x in files)
 
 
