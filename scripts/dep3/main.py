@@ -19,6 +19,7 @@ def report(path):
 
 
 def patch(archive, source, dsc):
+    print(source.source)
     with source.unpack():
         return {
             "dep3": list(map(report, flatten("debian/patches")))
