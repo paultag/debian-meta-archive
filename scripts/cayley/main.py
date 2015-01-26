@@ -22,7 +22,7 @@ def cayley(el, data, component, package, version):
         targets = relation.get("targets", [])
         for target in targets:
             package_bd = target.get("package")
-            el += "<{package}> <{relation}> <{target}>\r\n".format(
+            el += "<{package}> <{relation}> <{target}> .\r\n".format(
                 package=package,
                 relation="build_depends",
                 target=package_bd,
