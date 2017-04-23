@@ -55,4 +55,4 @@ def canidate(archive, source, dsc):
 def is_python(source):
     return source.source['Section'] == "python"
 
-archive.amap(10, "unstable", "main", canidate)
+archive.amap(40, "unstable", "main", canidate)
